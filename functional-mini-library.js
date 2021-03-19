@@ -38,3 +38,18 @@ function take(arr,number){
 let newArr = arr.filter((el,index) => index == number)
 return newArr;
 }
+
+class Chain {
+constructor(array,number){
+this.array  = array;
+this.number = number;
+}
+skip(){
+console.log(this.array.filter((el,index) => index != this.number))
+return this;
+}
+take(){
+console.log(this.array.filter((el,index) => index == this.number)) 
+return this;
+}
+}
